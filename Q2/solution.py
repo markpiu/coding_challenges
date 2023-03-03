@@ -1,15 +1,9 @@
-
-
-f = open("input.txt", "r")
-Lines = f.readlines()
+nooflines = input()
 allValid = True
 errorCodes = []
 firstline = True
-for record in Lines:
-  if firstline:
-    firstline = False
-  else:
-    s = record.split()
+for i in range(0,int(nooflines)):
+    s = input().split()
     if s[1] == "false":
       allValid = False
       errorCodes.append(s[2])
@@ -18,4 +12,5 @@ for record in Lines:
 if allValid:
     print("Yes")
 else:
-    print("No",*errorCodes)
+    print("No")
+    print(*errorCodes)
